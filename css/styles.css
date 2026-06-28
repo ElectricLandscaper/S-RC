@@ -254,7 +254,7 @@ html.js .fade-up.visible { opacity: 1; transform: none; }
   inset: 0;
   background-size: cover;
   background-position: center;
-  background-image: url('../assets/hero_retaining_wall.jpg');
+  background-image: url('../assets/hero_boulder_wall.jpg');
 }
 .hero__bg::after {
   content: '';
@@ -262,9 +262,9 @@ html.js .fade-up.visible { opacity: 1; transform: none; }
   inset: 0;
   background: linear-gradient(
     to right,
-    rgba(10,10,10,0.72) 0%,
-    rgba(10,10,10,0.52) 50%,
-    rgba(10,10,10,0.28) 100%
+    rgba(10,10,10,0.80) 0%,
+    rgba(10,10,10,0.55) 50%,
+    rgba(10,10,10,0.20) 100%
   );
 }
 .hero__content {
@@ -272,15 +272,15 @@ html.js .fade-up.visible { opacity: 1; transform: none; }
   z-index: 2;
   max-width: var(--max-width);
   margin: 0 auto;
-  padding: 80px 24px 40px;
+  padding: 48px 24px 40px;
 }
 .hero__brand-logo {
   position: absolute;
   top: 88px;
   left: 32px;
-  width: 140px;
+  width: 280px;
   z-index: 3;
-  filter: drop-shadow(0 2px 16px rgba(0, 0, 0, 0.7));
+  filter: drop-shadow(0 4px 20px rgba(0, 0, 0, 0.7));
 }
 .hero__eyebrow {
   font-family: var(--font-mono);
