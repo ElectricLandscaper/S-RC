@@ -1054,3 +1054,42 @@ html.js .fade-up.visible { opacity: 1; transform: none; }
   .section { padding: 64px 0; }
   .hero__title { font-size: clamp(40px, 12vw, 64px); }
 }
+/* ============================================================
+   LOGO UPDATE PATCH — append to end of css/styles.css
+   Changes: badge in nav, GWP in hero, larger footer logo,
+            hero background path fix
+   ============================================================ */
+
+/* --- Hero: GWP brand logo above headline ------------------- */
+.hero__brand-logo {
+  display: block;
+  width: 240px;
+  max-width: 52vw;
+  margin: 0 auto 36px;
+  filter: drop-shadow(0 4px 28px rgba(0, 0, 0, 0.85));
+}
+
+/* --- Hero background: fix path from css/ directory --------- */
+/* Overrides whatever url() was set in the original .hero__bg  */
+.hero__bg {
+  background-image: url('../assets/hero_retaining_wall.jpg');
+}
+
+/* --- Footer: GWP logo larger and more prominent ------------ */
+.footer__brand img {
+  width: 190px;
+  height: auto;
+  margin-bottom: 20px;
+}
+
+/* --- Responsive -------------------------------------------- */
+@media (max-width: 768px) {
+  .hero__brand-logo {
+    width: 160px;
+    margin-bottom: 24px;
+  }
+
+  .footer__brand img {
+    width: 150px;
+  }
+}
