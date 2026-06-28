@@ -272,29 +272,21 @@ html.js .fade-up.visible { opacity: 1; transform: none; }
   z-index: 2;
   max-width: var(--max-width);
   margin: 0 auto;
-  padding: 80px 24px;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  gap: 56px;
+  padding: 80px 24px 40px;
 }
-.hero__logo-col { flex: 0 0 auto; }
 .hero__brand-logo {
   display: block;
-  width: 300px;
-  max-width: 38vw;
-  border-radius: 16px;
-  box-shadow:
-    0 0 64px rgba(192, 57, 43, 0.45),
-    0 8px 40px rgba(0, 0, 0, 0.90);
+  width: 160px;
+  max-width: 28vw;
+  margin-bottom: 32px;
+  filter: drop-shadow(0 4px 20px rgba(0, 0, 0, 0.65));
 }
-.hero__text-col { flex: 1; min-width: 0; }
 .hero__eyebrow {
   font-family: var(--font-mono);
   font-size: 11px;
   letter-spacing: 0.2em;
   text-transform: uppercase;
-  color: var(--crimson);
+  color: var(--sand);
   margin-bottom: 20px;
   display: flex;
   align-items: center;
@@ -305,7 +297,7 @@ html.js .fade-up.visible { opacity: 1; transform: none; }
   display: block;
   width: 32px;
   height: 1px;
-  background: var(--crimson);
+  background: var(--sand);
 }
 .hero__title {
   font-family: var(--font-display);
@@ -1066,20 +1058,9 @@ html.js .fade-up.visible { opacity: 1; transform: none; }
 }
 
 /* ── RESPONSIVE MISC ───────────────────────────────────────── */
-@media (max-width: 900px) {
-  .hero__content { gap: 36px; }
-  .hero__brand-logo { width: 220px; }
-}
 @media (max-width: 768px) {
   .section { padding: 64px 0; }
-  .hero__content {
-    flex-direction: column;
-    text-align: center;
-    gap: 28px;
-  }
-  .hero__brand-logo { width: 180px; max-width: 60vw; }
-  .hero__eyebrow { justify-content: center; }
   .hero__title { font-size: clamp(40px, 12vw, 64px); }
-  .hero__cta { justify-content: center; }
+  .hero__brand-logo { width: 120px; }
   .footer__brand img { width: 150px; }
 }
