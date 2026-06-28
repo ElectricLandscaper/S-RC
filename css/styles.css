@@ -275,11 +275,12 @@ html.js .fade-up.visible { opacity: 1; transform: none; }
   padding: 80px 24px 40px;
 }
 .hero__brand-logo {
-  display: block;
-  width: 160px;
-  max-width: 28vw;
-  margin-bottom: 32px;
-  filter: drop-shadow(0 4px 20px rgba(0, 0, 0, 0.65));
+  position: absolute;
+  top: 88px;
+  left: 32px;
+  width: 140px;
+  z-index: 3;
+  filter: drop-shadow(0 2px 16px rgba(0, 0, 0, 0.7));
 }
 .hero__eyebrow {
   font-family: var(--font-mono);
