@@ -1,0 +1,3 @@
+# Redirect sandroseconstruction.com (no "and") -> sandandroseconstruction.com (with "and")
+https://sandroseconstruction.com/* https://sandandroseconstruction.com/:splat 301
+https://www.sandroseconstruction.com/* https://www.sandandroseconstruction.com/:splat 301
