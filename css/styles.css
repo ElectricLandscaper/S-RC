@@ -10,9 +10,9 @@
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
 :root {
-  --crimson:    #b52020;
+  --crimson:    #8B1020;
   --crimson-deep: #5C0018;
-  --crimson-hover: #9a1a1a;
+  --crimson-hover: #5C0018;
   --sand:       #c9a87c;
   --dark:       #0a0a0a;
   --surface-1:  #141414;
@@ -98,7 +98,7 @@ ul { list-style: none; }
 }
 
 .btn-primary {
-  background: var(--crimson);
+  background: var(--crimson-deep);
   color: #fff;
 }
 .btn-primary:hover { background: var(--crimson-hover); transform: translateY(-1px); }
@@ -629,8 +629,8 @@ html.js .fade-up.visible { opacity: 1; transform: none; }
 /* ── CTA SECTION ───────────────────────────────────────────── */
 .cta-section {
   background: var(--crimson-deep);
-  border-top: 1px solid rgba(192,57,43,0.4);
-  border-bottom: 1px solid rgba(192,57,43,0.4);
+  border-top: 1px solid rgba(139,16,32,0.4);
+  border-bottom: 1px solid rgba(139,16,32,0.4);
   padding: 80px 0;
   text-align: center;
 }
