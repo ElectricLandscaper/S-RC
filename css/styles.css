@@ -254,16 +254,17 @@ html.js .fade-up.visible { opacity: 1; transform: none; }
   inset: 0;
   background-size: cover;
   background-position: center;
-  background-image: url('assets/hero_retaining_wall.jpg');
+  background-image: url('../assets/hero_retaining_wall.jpg');
 }
 .hero__bg::after {
   content: '';
   position: absolute;
   inset: 0;
   background: linear-gradient(
-    105deg,
-    rgba(10,10,10,0.88) 40%,
-    rgba(10,10,10,0.5) 100%
+    to right,
+    rgba(10,10,10,0.72) 0%,
+    rgba(10,10,10,0.52) 50%,
+    rgba(10,10,10,0.28) 100%
   );
 }
 .hero__content {
@@ -272,7 +273,22 @@ html.js .fade-up.visible { opacity: 1; transform: none; }
   max-width: var(--max-width);
   margin: 0 auto;
   padding: 80px 24px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 56px;
 }
+.hero__logo-col { flex: 0 0 auto; }
+.hero__brand-logo {
+  display: block;
+  width: 300px;
+  max-width: 38vw;
+  border-radius: 16px;
+  box-shadow:
+    0 0 64px rgba(192, 57, 43, 0.45),
+    0 8px 40px rgba(0, 0, 0, 0.90);
+}
+.hero__text-col { flex: 1; min-width: 0; }
 .hero__eyebrow {
   font-family: var(--font-mono);
   font-size: 11px;
@@ -798,7 +814,7 @@ html.js .fade-up.visible { opacity: 1; transform: none; }
   padding-bottom: 48px;
   border-bottom: 1px solid var(--border);
 }
-.footer__brand img { height: 48px; width: auto; margin-bottom: 16px; }
+.footer__brand img { width: 190px; height: auto; margin-bottom: 20px; }
 .footer__brand p {
   font-size: 14px;
   color: var(--text-muted);
@@ -1050,46 +1066,20 @@ html.js .fade-up.visible { opacity: 1; transform: none; }
 }
 
 /* ── RESPONSIVE MISC ───────────────────────────────────────── */
+@media (max-width: 900px) {
+  .hero__content { gap: 36px; }
+  .hero__brand-logo { width: 220px; }
+}
 @media (max-width: 768px) {
   .section { padding: 64px 0; }
+  .hero__content {
+    flex-direction: column;
+    text-align: center;
+    gap: 28px;
+  }
+  .hero__brand-logo { width: 180px; max-width: 60vw; }
+  .hero__eyebrow { justify-content: center; }
   .hero__title { font-size: clamp(40px, 12vw, 64px); }
-}
-/* ============================================================
-   LOGO UPDATE PATCH — append to end of css/styles.css
-   Changes: badge in nav, GWP in hero, larger footer logo,
-            hero background path fix
-   ============================================================ */
-
-/* --- Hero: GWP brand logo above headline ------------------- */
-.hero__brand-logo {
-  display: block;
-  width: 240px;
-  max-width: 52vw;
-  margin: 0 auto 36px;
-  filter: drop-shadow(0 4px 28px rgba(0, 0, 0, 0.85));
-}
-
-/* --- Hero background: fix path from css/ directory --------- */
-/* Overrides whatever url() was set in the original .hero__bg  */
-.hero__bg {
-  background-image: url('../assets/hero_retaining_wall.jpg');
-}
-
-/* --- Footer: GWP logo larger and more prominent ------------ */
-.footer__brand img {
-  width: 190px;
-  height: auto;
-  margin-bottom: 20px;
-}
-
-/* --- Responsive -------------------------------------------- */
-@media (max-width: 768px) {
-  .hero__brand-logo {
-    width: 160px;
-    margin-bottom: 24px;
-  }
-
-  .footer__brand img {
-    width: 150px;
-  }
+  .hero__cta { justify-content: center; }
+  .footer__brand img { width: 150px; }
 }
