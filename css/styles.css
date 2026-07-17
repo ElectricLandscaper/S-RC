@@ -262,9 +262,9 @@ html.js .fade-up.visible { opacity: 1; transform: none; }
   inset: 0;
   background: linear-gradient(
     to right,
-    rgba(5,5,15,0.62) 0%,
-    rgba(8,8,18,0.42) 50%,
-    rgba(10,10,20,0.15) 100%
+    rgba(5,5,15,0.38) 0%,
+    rgba(8,8,18,0.22) 50%,
+    rgba(10,10,20,0.05) 100%
   );
 }
 .hero__content {
